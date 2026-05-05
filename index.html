@@ -801,7 +801,55 @@ body.modal-open #hud{
     </div>
   </section>
 
-  <!-- 3: 플레이 흐름 -->
+  <!-- 3: 조작법 -->
+  <section class="slide">
+    <div class="kicker">Controls</div>
+    <h2>조작법</h2>
+    <div class="ctrl-grid">
+
+      <div class="ctrl-step">
+        <div class="step-num">STEP 01 · START</div>
+        <div class="step-img placeholder">
+          공중에 떠 있는<br><b>"SHOOT TO START"</b><br>큐브에 한 발
+        </div>
+        <div class="step-title">게임 시작</div>
+        <div class="step-desc">카메라 앞 START 큐브를 권총으로 1발 사격하면 세션 개시.</div>
+        <div class="step-keys">
+          <span class="key-tag">RT · 트리거</span>
+        </div>
+      </div>
+
+      <div class="ctrl-step">
+        <div class="step-num">STEP 02 · FIRE</div>
+        <div class="step-img"><img src="images/right_controller.png" alt="오른손 컨트롤러 + 권총"></div>
+        <div class="step-title">오른손 — 발사</div>
+        <div class="step-desc">오른손 컨트롤러로 권총을 쥐고 검지 트리거를 당겨 발사.</div>
+        <div class="step-keys">
+          <span class="key-tag">Right Trigger</span>
+          <span class="key-tag muted">Right Grip · 잡기</span>
+        </div>
+      </div>
+
+      <div class="ctrl-step">
+        <div class="step-num">STEP 03 · INFO</div>
+        <div class="step-img placeholder">
+          왼손 ScoreBoard UI 사진<br><b>(Play 모드에서 캡처 필요)</b><br>— 추후 교체
+        </div>
+        <div class="step-title">왼손 — 실시간 정보</div>
+        <div class="step-desc">
+          왼손 손등을 자기 쪽으로 돌리면<br>
+          ScoreBoard 표시.<br>
+          <span style="color:var(--cyan)">점수 · 처치 수 · 남은 시간.</span>
+        </div>
+        <div class="step-keys">
+          <span class="key-tag">Left Wrist · 회전</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4: 플레이 흐름 -->
   <section class="slide">
     <div class="kicker">Play Flow</div>
     <h2>한 판의 흐름</h2>
@@ -815,7 +863,7 @@ body.modal-open #hud{
     </div>
   </section>
 
-  <!-- 4: 일반 NPC -->
+  <!-- 5: 일반 NPC -->
   <section class="slide">
     <div class="kicker">Targets · 1 / 3</div>
     <div class="section-head">
@@ -861,14 +909,13 @@ body.modal-open #hud{
     </div>
   </section>
 
-  <!-- 5: 특수 NPC -->
+  <!-- 6: 특수 NPC -->
   <section class="slide">
     <div class="kicker">Targets · 2 / 3</div>
     <div class="section-head">
       <h2>특수</h2>
-      <span class="section-tag tag-special">Special · 보너스</span>
+      <span class="section-tag tag-special">Special</span>
     </div>
-    <p class="section-sub">희귀 등장. 발견 즉시 처치 권장.</p>
 
     <div class="npc-hero">
       <div class="img-wrap"><img src="images/assistant.png" alt="조교쌤"></div>
@@ -881,8 +928,10 @@ body.modal-open #hud{
           일반의 <b style="color:var(--fg)">2 ~ 3배</b> 점수.
         </p>
         <p style="margin-top:.8em">
-          맵에서 마주치긴 어렵지만 —<br>
-          <em style="color:var(--yellow);font-style:normal;font-weight:700">왠지 학과사무실 문 열면 계실 것 같다.</em>
+          <em style="color:var(--yellow);font-style:normal;font-weight:700">
+            맵에서 마주치긴 어렵지만 —<br>
+            왠지 학과사무실 문 열면 계실 것 같다.
+          </em>
         </p>
         <div class="npc-meta">
           <span><b>최대</b> 3명</span>
@@ -893,7 +942,7 @@ body.modal-open #hud{
     </div>
   </section>
 
-  <!-- 6: 교수님 NPC (Boss) -->
+  <!-- 7: 교수님 NPC (Boss) -->
   <section class="slide">
     <div class="kicker">Targets · 3 / 3</div>
     <div class="section-head">
@@ -910,7 +959,7 @@ body.modal-open #hud{
           <div class="npc-name">권숙연 교수님</div>
           <div class="npc-role">Professor · Boss-tier</div>
           <div class="npc-score minus">−7</div>
-          <div style="font-size:clamp(15px,1.3vw,21px);color:#ff8a96;margin-top:.4em;font-weight:700;line-height:1.3">쏜다면 총알에 관한 논문을 써야할 것만 같다<span style="color:var(--muted)">...</span></div>
+          <div style="font-size:clamp(15px,1.3vw,21px);color:#ff8a96;margin-top:.4em;font-weight:700;line-height:1.3">쏜다면 총알에 관한 논문을 써야할 것만 같다...</div>
           <div class="npc-meta"><span><b>최대</b> 5명</span><span><b>가중치</b> 0.5</span><span><b>등장</b> 흔함</span></div>
         </div>
       </div>
@@ -921,7 +970,7 @@ body.modal-open #hud{
           <div class="npc-name">장진수 교수님</div>
           <div class="npc-role">Professor · Boss-tier</div>
           <div class="npc-score minus">−7</div>
-          <div style="font-size:clamp(16px,1.4vw,22px);color:#ff8a96;margin-top:.4em;font-weight:700;line-height:1.3">쏘면 혼날 것 같다 <span style="color:var(--muted);font-weight:500;font-size:.85em">(현실에서)</span></div>
+          <div style="font-size:clamp(16px,1.4vw,22px);color:#ff8a96;margin-top:.4em;font-weight:700;line-height:1.3">쏘면 혼날 것 같다 <span style="font-weight:500;font-size:.85em">(현실에서)</span></div>
           <div class="npc-meta"><span><b>최대</b> 5명</span><span><b>가중치</b> 0.5</span><span><b>등장</b> 흔함</span></div>
         </div>
       </div>
@@ -929,138 +978,7 @@ body.modal-open #hud{
     </div>
   </section>
 
-  <!-- 7: 조작법 -->
-  <section class="slide">
-    <div class="kicker">Controls</div>
-    <h2>조작법</h2>
-    <div class="ctrl-grid">
-
-      <div class="ctrl-step">
-        <div class="step-num">STEP 01 · START</div>
-        <div class="step-img placeholder">
-          공중에 떠 있는<br><b>"SHOOT TO START"</b><br>큐브에 한 발
-        </div>
-        <div class="step-title">게임 시작</div>
-        <div class="step-desc">카메라 앞 START 큐브를 권총으로 1발 사격하면 세션 개시.</div>
-        <div class="step-keys">
-          <span class="key-tag">RT · 트리거</span>
-        </div>
-      </div>
-
-      <div class="ctrl-step">
-        <div class="step-num">STEP 02 · FIRE</div>
-        <div class="step-img"><img src="images/right_controller.png" alt="오른손 컨트롤러 + 권총"></div>
-        <div class="step-title">오른손 — 발사</div>
-        <div class="step-desc">오른손 컨트롤러로 권총을 쥐고 검지 트리거를 당겨 발사.</div>
-        <div class="step-keys">
-          <span class="key-tag">Right Trigger</span>
-          <span class="key-tag muted">Right Grip · 잡기</span>
-        </div>
-      </div>
-
-      <div class="ctrl-step">
-        <div class="step-num">STEP 03 · INFO</div>
-        <div class="step-img placeholder">
-          왼손 ScoreBoard UI 사진<br><b>(Play 모드에서 캡처 필요)</b><br>— 추후 교체
-        </div>
-        <div class="step-title">왼손 — 실시간 정보</div>
-        <div class="step-desc">왼손 손목을 자기 쪽으로 돌리면 ScoreBoard 표시. 점수 · 처치 수 · 남은 시간.</div>
-        <div class="step-keys">
-          <span class="key-tag">Left Wrist · 회전</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 8: 스폰 메커니즘 -->
-  <section class="slide">
-    <div class="kicker">Spawn Logic</div>
-    <h2>맵 전체에 <span class="accent">40명</span> 자동 배치</h2>
-    <div class="cols c2" style="margin-top:2vh">
-      <div class="card">
-        <h3>NavMesh 면적 비례 샘플링</h3>
-        <p class="desc">베이크된 walkable 영역의 삼각형 면적에 비례해 랜덤 위치 선택. 맵 모양/크기 무관 균등 분포.</p>
-      </div>
-      <div class="card">
-        <h3>가중치 + 최대치</h3>
-        <p class="desc">각 variant 의 weight 비례 추첨. maxCount 도달한 종류는 후보에서 제외.</p>
-      </div>
-      <div class="card">
-        <h3>자동 리스폰</h3>
-        <p class="desc">3초마다 생존 수 체크 → 부족분만 새 위치에 1마리씩 spawn. 항상 40명 유지.</p>
-      </div>
-      <div class="card">
-        <h3>사망 이펙트</h3>
-        <p class="desc">처치 시 AI 로고 스프라이트(claude · gemini 등)가 사방으로 튀어 오름. variant 별 모션 override 지원.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6: 시스템 구성 -->
-  <section class="slide">
-    <div class="kicker">Architecture</div>
-    <h2>시스템 구성</h2>
-    <div class="sys-list">
-      <div class="sys-row">
-        <div class="sys-name">StartTarget</div>
-        <div class="sys-desc">권총 raycast hit 1회 → <code style="color:var(--cyan)">GameSession.StartGame()</code> 호출. 첫 진입 시에만 표시.</div>
-      </div>
-      <div class="sys-row">
-        <div class="sys-name">GameSession</div>
-        <div class="sys-desc">120초 카운트다운 · BGM loop · 처치 수 집계 · OnGameStarted / OnTimeUp 이벤트 발신.</div>
-      </div>
-      <div class="sys-row">
-        <div class="sys-name">EnemySpawner</div>
-        <div class="sys-desc">NavMesh 면적 비례 spawn · weight/maxCount 기반 variant 선택 · 정적 점수 시스템 통합.</div>
-      </div>
-      <div class="sys-row">
-        <div class="sys-name">EnemyHealth</div>
-        <div class="sys-desc">개별 AI 체력 · 사망 처리 · variant 별 score / death motion override 수신.</div>
-      </div>
-      <div class="sys-row">
-        <div class="sys-name">PistolMecanic</div>
-        <div class="sys-desc">XR Toolkit grab · 트리거 발사 · 머즐 플래시 · 탄피 · 히트 이펙트.</div>
-      </div>
-      <div class="sys-row">
-        <div class="sys-name">ScoreBoardUI · ScorePopup</div>
-        <div class="sys-desc">World Space UI · 처치 위치에 점수 popup · 누적 점수 실시간 표시.</div>
-      </div>
-      <div class="sys-row">
-        <div class="sys-name">GameOverUI · RestartTarget</div>
-        <div class="sys-desc">시간 종료 시 결과창 · RESTART 버튼 또는 재시작 큐브 사격 시 다음 라운드.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7: 개발 환경 -->
-  <section class="slide">
-    <div class="kicker">Stack</div>
-    <h2>개발 환경</h2>
-    <dl class="kv" style="margin-top:1vh">
-      <dt>엔진</dt><dd>Unity 2022.3.62f3 LTS</dd>
-      <dt>렌더 파이프라인</dt><dd>Universal Render Pipeline 14.0</dd>
-      <dt>VR 프레임워크</dt><dd>XR Interaction Toolkit 3.1.2</dd>
-      <dt>XR 백엔드</dt><dd>OpenXR 1.14 + Meta Quest Support</dd>
-      <dt>입력</dt><dd>Unity Input System 1.14</dd>
-      <dt>네트워크</dt><dd>Photon PUN2 <span class="muted" style="font-size:.7em">— 코드 포함, v1.0 싱글 기준</span></dd>
-      <dt>타겟 디바이스</dt><dd>Meta Quest 2 / 3 · Android ARM64</dd>
-    </dl>
-  </section>
-
-  <!-- 8: 팀 -->
-  <section class="slide">
-    <div class="kicker">Team</div>
-    <h2>팀 구성</h2>
-    <div class="team-grid" style="margin-top:1vh">
-      <div class="team-card"><div class="team-role">Map / Environment</div><div class="team-name">맵 디자인 · 1명</div></div>
-      <div class="team-card"><div class="team-role">Unity · VR / Character</div><div class="team-name">VR + 캐릭터 · 1명</div></div>
-      <div class="team-card"><div class="team-role">Unity · Network / Logic</div><div class="team-name">네트워크 + 로직 · 1명</div></div>
-      <div class="team-card"><div class="team-role">AI</div><div class="team-name">AI 시스템 · 1명</div></div>
-    </div>
-  </section>
-
-  <!-- 9: 마무리 -->
+  <!-- 8: 마무리 -->
   <section class="slide" style="text-align:center;align-items:center">
     <div class="kicker">Demo</div>
     <div class="end-big">시연.</div>
